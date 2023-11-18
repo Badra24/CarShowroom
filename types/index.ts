@@ -55,14 +55,17 @@ export interface OptionProps {
 export interface CustomFilterProps {
   title: string;
   options: OptionProps[];
+  setFuel?: React.Dispatch<React.SetStateAction<string>>;
+  setYear?: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export interface ShowMoreProps {
   pageNumber: number;
   isNext: boolean;
+  setLimit: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export interface SearchManuFacturerProps {
-  manufacturer: string;
-  setManuFacturer: (manufacturer: string) => void;
+  selected: string;
+  setSelected: (selected: string) => void;
 }
